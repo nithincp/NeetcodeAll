@@ -26,6 +26,8 @@ var isPalindrome = function(head){
         if(prevNode.val !== head.val){
             return false
         }
+        prevNode = prevNode.next
+        head = head.next
     }
 
     return true
