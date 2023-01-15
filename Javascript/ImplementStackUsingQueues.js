@@ -1,21 +1,24 @@
-var MyStack = function(){
-    this.stack = []
+var Myqueue = function(){
+    this.queue = []
 }
 
-MyStack.prototype.push = function(x){
-    this.stack.push(x)
+Myqueue.prototype.push = function(x){
+    this.queue.push(x)
 }
 
-MyStack.prototype.pop = function(){
-    return this.stack.pop()
+Myqueue.prototype.pop = function(){
+    for(let i=0;i<this.queue.length-1;i++){
+        this.queue.push(this.queue.shift())
+    }
+    return this.queue.shift()
 }
 
-MyStack.prototype.top = function(){
-    return this.stack[this.stack.length-1]
+Myqueue.prototype.top = function(){
+    return this.queue[this.queue.length-1]
 }
 
-MyStack.prototype.empty = function(){
-    if(this.stack.length == 0){
+Myqueue.prototype.empty = function(){
+    if(this.queue.length == 0){
         return true
     }
     else{
