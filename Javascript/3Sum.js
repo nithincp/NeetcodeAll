@@ -16,7 +16,7 @@ var threeSum = function(nums){
                 right -= 1
             }
             else if(sum<0){
-                left -= 1
+                left += 1
             }
             else{
                 finalList.push([nums[i],nums[left],nums[right]])
