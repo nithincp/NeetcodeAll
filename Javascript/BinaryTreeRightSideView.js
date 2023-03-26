@@ -8,6 +8,7 @@ var binaryTreeRightSideView = function(root){
     const outputArray = []
     const outputQueue = []
     const levelSet = new Set()
+    
 
     let level = 0
 
