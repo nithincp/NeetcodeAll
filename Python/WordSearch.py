@@ -21,7 +21,5 @@ def wordSearch(board,word):
     for i in range(ROWS):
         for j in range(COLS):
             if (dfs(i,j,0)):
-                return True
-            
-
+                return True        
     return False
