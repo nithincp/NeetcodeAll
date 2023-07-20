@@ -13,3 +13,4 @@ def lastStoneWeight(stones):
 
     stones.append(0)
     return -1*stones[0]
+    
